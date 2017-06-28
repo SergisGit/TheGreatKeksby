@@ -458,48 +458,53 @@ body {
 
 .checkbox-area {
     clear: both;
-    margin-top: 147px;
-    margin-bottom: 30px;
-    padding-bottom: 21px;
-    border-bottom: 1px solid #d5d5d5;
+	margin-top: 140px;
+    margin-bottom: 28px;
+	padding-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d5d5d5;	
 }
 
-.checkbox-area .my-checkbox {
-    position: relative;
-    display: inline-block;
+.my-checkbox {
+	position: relative;
+	margin-left: 58px;
+}
+.my-checkbox::before {
+    position: absolute;
+	content: "";
     width: 26px;
     height: 26px;
     border: 2px solid #d5d5d5;
     vertical-align: bottom;
-    margin-left: 17px;
-    margin-right: 9px;
+    top: -11px;
+	left: -39px;	
 }
 
-.checkbox-area:hover .my-checkbox {
+.checkbox-area:hover .my-checkbox::before {
     border: 2px solid #b3b3b3;
 }
 
-.checkbox-area:active .my-checkbox {
+.checkbox-area:active .my-checkbox::before {
     border: 2px solid #8d745a;
 }
 
-.my-checkbox::before {
+.my-checkbox::after {
     position: absolute;
     content: "";
     width: 15px;
     height: 9px;  
-    top: 10%;
-    left: 25%;
+    top: -7px;
+    left: -31px;
 	box-shadow: -3px 3px 0 0 #a38b70;
     transform: rotate(-45deg);
     display: none;
 }
 
-.feedback-form input[type="checkbox"]:checked~.my-checkbox::before {
+.feedback-form input[type="checkbox"]:checked~.my-checkbox::after {
     display: block;
 }
 
-.feedback-form input[type="checkbox"]:active~.my-checkbox::before {
+.feedback-form input[type="checkbox"]:active~.my-checkbox::after {
     display: block;
     box-shadow: -3px 3px 0 0 rgba(40, 40, 40, 0.3);
 }
