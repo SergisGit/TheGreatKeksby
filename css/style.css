@@ -480,11 +480,11 @@ body {
 	left: -39px;	
 }
 
-.checkbox-area:hover .my-checkbox::before {
+.my-checkbox:hover::before {
     border: 2px solid #b3b3b3;
 }
 
-.checkbox-area:active .my-checkbox::before {
+.my-checkbox:active::before {
     border: 2px solid #8d745a;
 }
 
